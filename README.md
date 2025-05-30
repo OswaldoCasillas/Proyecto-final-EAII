@@ -18,7 +18,6 @@ proyecto-final/
 ├── data/
 │   └── dataset.csv          # Archivo CSV generado con comentarios
 ├── .env                     # Archivo con tu API Key de YouTube
-├── .env.example             # Ejemplo de .env (sin clave)
 ├── requirements.txt         # Dependencias necesarias
 └── README.md                # Este archivo
 
