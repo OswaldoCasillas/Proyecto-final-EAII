@@ -1,62 +1,82 @@
-# Proyecto Final: Scraping de Comentarios de YouTube
+¡Vamos a mejorar tu **README.md** para que luzca profesional y fácil de entender! Aquí tienes una versión revisada y más estructurada:
 
-Este proyecto es un pipeline reproducible y organizado para extraer comentarios de videos de YouTube utilizando la **YouTube Data API v3**. La información se guarda en un archivo CSV para su posterior análisis.
+---
+
+```markdown
+# 📊 Proyecto Final: Scraping de Comentarios de YouTube
+
+Este proyecto implementa un pipeline reproducible y organizado para extraer comentarios de videos en YouTube utilizando la **YouTube Data API v3**. Los comentarios se guardan en un archivo `.csv` para su posterior análisis.
 
 ## 🚀 Descripción
-- Se utiliza el canal de **Morat** como ejemplo.
-- El script busca videos en el canal y extrae hasta 500 comentarios por video.
-- Los comentarios incluyen ID, texto, video asociado y título.
-- Se guarda en el archivo `data/dataset.csv`.
+- Utiliza el canal de **Morat** como ejemplo.
+- Busca los videos más recientes y extrae hasta **500 comentarios por video**.
+- Los comentarios incluyen: ID del comentario, texto, ID del video, y título del video.
+- Los datos se guardan automáticamente en el archivo `data/dataset.csv`.
 
-## 📦 Estructura del Proyecto
+## 🗂️ Estructura del Proyecto
+```
+
 proyecto-final/
 ├── code/
-│ └── scraper.py # Script principal del scraper
+│   └── scraper.py           # Script principal del scraper
 ├── data/
-│ └── dataset.csv # Archivo CSV generado con comentarios
-├── .env # Archivo con tu API Key de YouTube
-├── .env.example # Ejemplo de .env para compartir
-├── requirements.txt # Dependencias necesarias para el entorno
-└── README.md # Este archivo
+│   └── dataset.csv          # Archivo CSV generado con comentarios
+├── .env                     # Archivo con tu API Key de YouTube
+├── .env.example             # Ejemplo de .env (sin clave)
+├── requirements.txt         # Dependencias necesarias
+└── README.md                # Este archivo
 
-## 🔐 Configuración
-1️⃣ Crea un archivo `.env` en el directorio raíz:
-(Reemplaza `TU_CLAVE_API` por tu propia clave).
+```
 
-2️⃣ Usa el archivo `.env.example` para compartir con otros (sin exponer tu clave).
+## 🔐 Configuración Inicial
+1️⃣ Crea un archivo `.env` en el directorio raíz y agrega tu API Key:
+```
 
-## 🛠 Reproducir el Entorno
-Crea y activa un entorno virtual (recomendado):
+YOUTUBE\_API\_KEY=TU\_CLAVE\_API
+
+````
+2️⃣ Comparte el archivo `.env.example` sin tu clave para otros usuarios.
+
+## ⚙️ Reproducir el Entorno
+1️⃣ Crea y activa un entorno virtual:
 ```bash
 python -m venv venv
-venv\Scripts\activate   # En Windows
-source venv/bin/activate # En Mac/Linux
+venv\Scripts\activate     # En Windows
+source venv/bin/activate  # En Mac/Linux
+````
 
-Instala dependencias:
+2️⃣ Instala las dependencias:
+
+```bash
 pip install -r requirements.txt
+```
 
-🏃‍♂️ Ejecución
+## 🏃‍♂️ Ejecución del Script
+
 Desde el directorio raíz:
+
+```bash
 python code/scraper.py
+```
 
-📈 Resultado
-El archivo data/dataset.csv contiene al menos 500 comentarios extraídos.
+## 📈 Resultados
 
+El archivo `data/dataset.csv` contendrá al menos 500 comentarios extraídos.
 Cada fila incluye:
 
-comment_id: ID del comentario
+* `comment_id`: ID del comentario
+* `comment`: Texto del comentario
+* `video_id`: ID del video
+* `video_title`: Título del video
 
-comment: Texto del comentario
+## 📝 Notas
 
-video_id: ID del video
+* Abre el CSV con Notepad++, VSCode, o Excel importando como **UTF-8**.
+* Puedes cambiar el canal objetivo modificando el valor de `channel_query` en `scraper.py`.
 
-video_title: Título del video
+## 👤 Autor
 
-📝 Notas
-Abre el CSV en editores como Notepad++, VSCode o Excel (importando como UTF-8).
+**Oswaldo Casillas**
+GitHub: [@OswaldoCasillas](https://github.com/OswaldoCasillas)
 
-Puedes modificar el canal objetivo cambiando el valor de channel_query en scraper.py.
-
-🧑‍💻 Autor
-Tu Nombre
-GitHub: @OswaldoCasillas
+```
