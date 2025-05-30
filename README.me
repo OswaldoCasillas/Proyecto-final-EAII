@@ -1,0 +1,62 @@
+# Proyecto Final: Scraping de Comentarios de YouTube
+
+Este proyecto es un pipeline reproducible y organizado para extraer comentarios de videos de YouTube utilizando la **YouTube Data API v3**. La información se guarda en un archivo CSV para su posterior análisis.
+
+## 🚀 Descripción
+- Se utiliza el canal de **Morat** como ejemplo.
+- El script busca videos en el canal y extrae hasta 500 comentarios por video.
+- Los comentarios incluyen ID, texto, video asociado y título.
+- Se guarda en el archivo `data/dataset.csv`.
+
+## 📦 Estructura del Proyecto
+proyecto-final/
+├── code/
+│ └── scraper.py # Script principal del scraper
+├── data/
+│ └── dataset.csv # Archivo CSV generado con comentarios
+├── .env # Archivo con tu API Key de YouTube
+├── .env.example # Ejemplo de .env para compartir
+├── requirements.txt # Dependencias necesarias para el entorno
+└── README.md # Este archivo
+
+## 🔐 Configuración
+1️⃣ Crea un archivo `.env` en el directorio raíz:
+(Reemplaza `TU_CLAVE_API` por tu propia clave).
+
+2️⃣ Usa el archivo `.env.example` para compartir con otros (sin exponer tu clave).
+
+## 🛠 Reproducir el Entorno
+Crea y activa un entorno virtual (recomendado):
+```bash
+python -m venv venv
+venv\Scripts\activate   # En Windows
+source venv/bin/activate # En Mac/Linux
+
+Instala dependencias:
+pip install -r requirements.txt
+
+🏃‍♂️ Ejecución
+Desde el directorio raíz:
+python code/scraper.py
+
+📈 Resultado
+El archivo data/dataset.csv contiene al menos 500 comentarios extraídos.
+
+Cada fila incluye:
+
+comment_id: ID del comentario
+
+comment: Texto del comentario
+
+video_id: ID del video
+
+video_title: Título del video
+
+📝 Notas
+Abre el CSV en editores como Notepad++, VSCode o Excel (importando como UTF-8).
+
+Puedes modificar el canal objetivo cambiando el valor de channel_query en scraper.py.
+
+🧑‍💻 Autor
+Tu Nombre
+GitHub: @OswaldoCasillas
