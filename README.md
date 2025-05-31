@@ -73,13 +73,3 @@ Cada fila incluye:
 
 **Oswaldo Casillas**
 GitHub: [@OswaldoCasillas](https://github.com/OswaldoCasillas)
-
-````
-
-4️⃣ Guarda el archivo.  
-5️⃣ Sube los cambios a GitHub:  
-```bash
-git add README.me
-git commit -m "Update README.me with project details"
-git push
-````
